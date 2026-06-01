@@ -607,7 +607,7 @@ section {
     border-top-color: #0ea5e9;
 }
 
-.modern-card.social-accent {
+.modern-card.web-accent {
     border-top-color: #d946ef;
 }
 
@@ -637,7 +637,7 @@ section {
     color: #0ea5e9;
 }
 
-.social-accent .card-icon-wrapper {
+.web-accent .card-icon-wrapper {
     background: rgba(217, 70, 239, 0.1);
     color: #d946ef;
 }
@@ -966,7 +966,24 @@ section {
 
 .big-service-icon {
     font-size: 12rem;
-    opacity: 0.05;
+    opacity: 0.15; /* Increase overall fallback visibility */
+}
+
+/* Google Brand Icon Styles */
+.big-service-icon.fa-google {
+    background: linear-gradient(135deg, #4285F4 0%, #EA4335 30%, #FBBC05 60%, #34A853 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.85; /* Clearly visible */
+}
+
+.service-tab-btn i.fa-google {
+    color: #4285F4; /* Google brand blue */
+}
+
+.service-tab-btn.active i.fa-google {
+    color: var(--white); /* Keep white on active gradient background for contrast */
 }
 
 @media (max-width: 992px) {
@@ -2584,3 +2601,30 @@ section {
         text-align: left !important;
     }
 }
+
+/* Gentle brand style */
+.brand-name-gentle {
+    font-weight: 600;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+
+/* SVG icon styles */
+.tab-icon-svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.big-service-icon-svg {
+    width: 160px;
+    height: 160px;
+    opacity: 0.95;
+    transition: var(--transition);
+}
+.pane-visual-box:hover .big-service-icon-svg {
+    transform: scale(1.05);
+}
